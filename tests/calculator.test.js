@@ -1,3 +1,9 @@
-test("expect 1 be equal to 1", () => {
-  expect(1).toBe(1);
+const calculator = require("../models/calculator");
+
+test("sum 5 + 100 = 105", () => {
+  expect(calculator.sum(5, 100)).toBe(105);
+});
+
+test("sum 'banana' + 100 = 'Error'", () => {
+  expect(calculator.sum("banana", 100)).toBe("Error");
 });
